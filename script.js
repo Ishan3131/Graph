@@ -116,6 +116,18 @@ function aCot(x){
     return val;
   }
 }
+//-----------------------sinh Function---------------------------//
+function SINH(x){
+  return Math.sinh(x);
+}
+//-----------------------cosh Function---------------------------//
+function COSH(x){
+  return Math.cosh(x);
+}
+//-----------------------tanh Function---------------------------//
+function TANH(x){
+  return Math.tanh(x);
+}
 //------------------------------------------------Function math to js----------------------------------------//
 function mathToJs(math) {
   let fns = ['+', '-', '*', '/', '^', '%', 'n', 's', 'h', 'm', 'g', 'c', 't', '(', '{', '[', 'X', ' ', ',']
@@ -144,13 +156,13 @@ function mathToJs(math) {
     str += ch
   }
   let js = str.replaceAll('^', '**');
+  js = js.replaceAll('sinh', 'SINH');
+  js = js.replaceAll('cosh', 'COSH');
+  js = js.replaceAll('tanh', 'TANH');
   js = js.replaceAll('sin', 'Math.sin');
   js = js.replaceAll('cosec', 'COSeC');
   js = js.replaceAll('cos', 'Math.cos');
   js = js.replaceAll('tan', 'Math.tan');
-  js = js.replaceAll('sinh', 'Math.sinh');
-  js = js.replaceAll('cosh', 'Math.cosh');
-  js = js.replaceAll('tanh', 'Math.tanh');
   js = js.replaceAll('aSin', 'Math.asin');
   js = js.replaceAll('aCosec', 'aCOsec');
   js = js.replaceAll('aCos', 'Math.acos');
