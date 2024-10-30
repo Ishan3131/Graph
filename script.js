@@ -3,6 +3,7 @@ let ctx = graph.getContext("2d");
 graph.width = window.innerWidth * 3 / 4;
 graph.height = window.innerHeight - 4.5;
 let graph_detailed = false;
+let thickness = 1;
 //--------------------------------------------Graph scale : (value of 1 unit)-------------------------------------------//
 let scale;
 //--------------------------------------------Creating a graph page function---------------------------------------------------
@@ -200,7 +201,7 @@ function plot() {
       let val = f(x);
       val = isNaN(val)?undefined:val;
       if (val != NaN && val != "Infinity" && val != "-Infinity") {
-        let pp = new Point(graph.width / 2 + 10 * x / scale, graph.height / 2 - 10 * val / scale, 1, locus_color);
+        let pp = new Point(graph.width / 2 + 10 * x / scale, graph.height / 2 - 10 * val / scale, thickness, locus_color);
         pp.draw();
       }
       if (val == NaN) {
