@@ -16,6 +16,7 @@ function default_input() {
 }
 //----------------------------------------Clear log function-------------------------------------------------------------------------//
 function clearLog() {
+  graph_log_appear();
   keyss = Object.keys(graphs);
   keyss.forEach((key) => {
       graphs[key].removee()
