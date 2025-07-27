@@ -13,7 +13,7 @@ graphpage('white');
 let graphs = {}
 let selected = null;
 let state = true;
-//------------------------------------------------POINT CLASS---------------------------------------------------------------------------//
+//------------------------------------------------LOCUS CLASS---------------------------------------------------------------------------//
 class Locus {
   constructor(func, domain, rate, scale, color) {
     this.func = func;
