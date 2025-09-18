@@ -1,13 +1,13 @@
-//----------------------Function max--------------------------//
+//----------------------max function--------------------------//
 function maX(...arr) {
   return Math.max(...arr);
 }
-//----------------------Function fractional Part--------------//
+//----------------------fractional Part function--------------//
 function fractionalPart(n){
     n = Math.abs(n)
   return n - Math.floor(n);
 }
-//----------------------Logarithm Function--------------------//
+//----------------------logarithm Function--------------------//
 function log(base, number){
   return Math.log(number)/Math.log(base);
 }
