@@ -6,6 +6,7 @@ let graph_detailed = false;
 functionLog = document.querySelector('#function_log');
 graphLog = document.querySelector('#graph_log');
 laser_line = document.querySelector('.laser-line');
+let plot_btn = document.querySelector('#plot');
 //--------------------------------------------Graph scale : (value of 1 unit)-------------------------------------------//
 let scale;
 let ids;

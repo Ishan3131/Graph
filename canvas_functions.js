@@ -44,7 +44,7 @@ let x;
 let val;
 let i = 0;
 function plot() {
-  if(state){
+  plot_btn.disabled = true;
   if(i == 0){
     let func = document.querySelector('#function').value;                   // Mathematical function enterd by user [ eg- f(x) = x**2 + 5*x - 6 ]
     document.querySelector('#function_log').value += `f(x) = ${func} :\n`;  // Adding function name in function log.
@@ -87,14 +87,13 @@ function plot() {
           requestAnimationFrame(()=>{
             console.log(i);
             currentLocus.logImg();
-            state = true;
             currentLocus.writeLog();
+            plot_btn.disabled = false;
           });
         });
       }
     }
-    animation();
-  }
+    r = requestAnimationFrame(animation)
   }
 }
 //---------------------------------------------Detailes graph function----------------------------------------------------------------//
